@@ -69,3 +69,244 @@
 30 005 06:05:40 WARN   [geoserver.security] - Failed login, user admin from 172.18.0.1
 30 005 06:05:40 INFO   [geoserver.security] - Brute force attack prevention, delaying login for 1801ms
 30 014 06:14:17 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+31 050 01:50:58 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: user=6
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+31 051 01:51:58 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+31 051 01:51:58 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+31 052 01:52:01 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+31 052 01:52:02 CONFIG [org.geoserver] - Loading catalog /geoserver
+31 052 01:52:03 CONFIG [org.geoserver] - Loaded style 'point'
+31 052 01:52:03 CONFIG [org.geoserver] - Loaded style 'generic'
+31 052 01:52:03 CONFIG [org.geoserver] - Loaded style 'line'
+31 052 01:52:03 CONFIG [org.geoserver] - Loaded style 'polygon'
+31 052 01:52:03 CONFIG [org.geoserver] - Loaded style 'raster'
+31 052 01:52:03 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+31 052 01:52:03 CONFIG [org.geoserver] - Read catalog in 1.110 s
+31 052 01:52:05 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+31 052 01:52:05 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl-693f0199:187355d648c:-8000', enabled
+31 052 01:52:05 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl-693f0199:187355d648c:-7fff', enabled
+31 052 01:52:06 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl-693f0199:187355d648c:-7ffe', enabled
+31 052 01:52:06 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl-693f0199:187355d648c:-7ffd', enabled
+31 052 01:52:06 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--482e96d9:187311e5e52:-7ff8', enabled
+31 052 01:52:07 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 052 01:52:08 CONFIG [gwc.config] - Create configuration file '/opt/geoserver/data_dir/gwc/geowebcache.xml' from template jar:file:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/gwc-core-1.21.1.jar!/geowebcache_empty.xml
+31 052 01:52:09 WARN   [config.XMLConfiguration] - GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+31 052 01:52:09 WARN   [config.XMLConfiguration] - Will try to use configuration anyway. Please check the order of declared elements against the schema.
+31 052 01:52:10 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+31 052 01:52:10 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+31 052 01:52:11 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+31 052 01:52:11 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+31 052 01:52:11 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+31 052 01:52:11 CONFIG [gwc.layer] - Loaded 0 tile layers in 7.811 ms
+31 052 01:52:11 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+31 052 01:52:11 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+31 052 01:52:13 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+31 052 01:52:57 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+31 052 01:52:59 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 052 01:52:59 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 052 01:52:59 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 053 01:53:08 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 053 01:53:08 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+31 053 01:53:08 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+31 053 01:53:08 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+31 053 01:53:08 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+31 053 01:53:08 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+31 053 01:53:08 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+31 053 01:53:36 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+31 053 01:53:40 INFO   [geoserver.monitor] - Monitor extension enabled
+31 054 01:54:36 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+31 054 01:54:36 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+31 054 01:54:36 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+31 054 01:54:36 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+31 054 01:54:37 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+31 054 01:54:37 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+31 054 01:54:37 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 054 01:54:37 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 054 01:54:37 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+31 054 01:54:37 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+31 054 01:54:37 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+31 054 01:54:37 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+31 054 01:54:37 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+31 054 01:54:37 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+31 054 01:54:57 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+31 054 01:54:57 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+31 055 01:55:01 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+31 055 01:55:01 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+31 055 01:55:01 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 055 01:55:18 INFO   [jdbc.JDBCQuotaStore] - Closing up the JDBC quota store 
+31 055 01:55:19 WARN   [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@42abc73d[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@14355fd6] rejected from java.util.concurrent.ThreadPoolExecutor@4d044308[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+31 055 01:55:19 WARN   [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'geoWebCacheExtensions': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+31 055 01:55:19 INFO   [geoserver.logging] - Beginning GeoServer cleanup sequence
+31 057 01:57:11 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+31 057 01:57:14 WARN   [geoserver.monitor] - monitoring storage memory not found, falling back to 'memory'
+31 057 01:57:15 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+31 057 01:57:15 CONFIG [org.geoserver] - Loading catalog /geoserver
+31 057 01:57:15 CONFIG [org.geoserver] - Loaded style 'generic'
+31 057 01:57:15 CONFIG [org.geoserver] - Loaded style 'point'
+31 057 01:57:15 CONFIG [org.geoserver] - Loaded style 'line'
+31 057 01:57:15 CONFIG [org.geoserver] - Loaded style 'polygon'
+31 057 01:57:15 CONFIG [org.geoserver] - Loaded style 'raster'
+31 057 01:57:15 WARN   [org.geoserver] - No 'workspaces' directory found, unable to load any stores.
+31 057 01:57:15 CONFIG [org.geoserver] - Read catalog in 197.7 ms
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl--352fa20b:1873562211d:-8000', enabled
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl--352fa20b:1873562211d:-7fff', enabled
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl--352fa20b:1873562211d:-7ffe', enabled
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--482e96d9:187311e5e52:-7ff8', enabled
+31 057 01:57:16 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl--352fa20b:1873562211d:-7ffd', enabled
+31 057 01:57:16 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 057 01:57:16 CONFIG [gwc.config] - Create configuration file '/opt/geoserver/data_dir/gwc/geowebcache.xml' from template jar:file:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/gwc-core-1.21.1.jar!/geowebcache_empty.xml
+31 057 01:57:16 WARN   [config.XMLConfiguration] - GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+31 057 01:57:16 WARN   [config.XMLConfiguration] - Will try to use configuration anyway. Please check the order of declared elements against the schema.
+31 057 01:57:16 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+31 057 01:57:16 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+31 057 01:57:16 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+31 057 01:57:16 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+31 057 01:57:16 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+31 057 01:57:16 CONFIG [gwc.layer] - Loaded 0 tile layers in 3.689 ms
+31 057 01:57:16 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+31 057 01:57:16 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+31 057 01:57:17 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+31 057 01:57:18 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+31 057 01:57:19 WARN   [gce.imagemosaic] - Unable to set ordering between tiff readers spi
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: user=6
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+31 057 01:57:19 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+31 057 01:57:19 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+31 057 01:57:24 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+31 057 01:57:24 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 057 01:57:24 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 057 01:57:24 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 057 01:57:24 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 057 01:57:24 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+31 057 01:57:24 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+31 057 01:57:24 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+31 057 01:57:24 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+31 057 01:57:24 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+31 057 01:57:24 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+31 057 01:57:26 INFO   [geoserver.monitor] - Monitor extension enabled
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+31 057 01:57:26 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 057 01:57:26 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 057 01:57:29 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+31 057 01:57:29 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+31 057 01:57:30 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+31 057 01:57:30 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+31 057 01:57:30 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 006 02:06:54 WARN   [geoserver.security] - Failed login, user admin from 172.18.0.1
+31 006 02:06:54 INFO   [geoserver.security] - Brute force attack prevention, delaying login for 4925ms
+31 006 02:06:59 INFO   [geoserver.security] - Strong cryptography is available
+31 007 02:07:00 WARN   [geoserver.security] - Failed login, user admin from 172.18.0.1
+31 007 02:07:00 INFO   [geoserver.security] - Brute force attack prevention, delaying login for 3261ms
+31 009 02:09:38 INFO   [jdbc.JDBCQuotaStore] - Closing up the JDBC quota store 
+31 009 02:09:38 WARN   [support.DisposableBeanAdapter] - Destroy method 'destroy' on bean with name 'gwcMemoryBlobStore' threw an exception: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@31d426a3[Not completed, task = org.geowebcache.storage.blobstore.memory.MemoryBlobStore$BlobStoreTask@3ad8957] rejected from java.util.concurrent.ThreadPoolExecutor@6f2f1ee1[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+31 009 02:09:38 WARN   [support.DisposableBeanAdapter] - Invocation of destroy method failed on bean with name 'geoServerLoader': org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'geoWebCacheExtensions': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+31 009 02:09:38 INFO   [geoserver.logging] - Beginning GeoServer cleanup sequence
+31 011 02:11:46 CONFIG [geoserver.logging] - Log4j 2 configuration set to DEFAULT_LOGGING.xml
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: ows.global=100
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: ows.wms.getmap=10
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: ows.wfs.getfeature.application/msexcel=4
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: user=6
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: ows.gwc=16
+31 011 02:11:54 INFO   [flow.config] - Loaded control-flow rule: user.ows.wps.execute=1000/d;30s
+31 011 02:11:54 CONFIG [geoserver.flow] - Control-flow active with 6 flow controllers
+31 011 02:11:56 CONFIG [org.geoserver] - GeoServer configuration lock is enabled
+31 011 02:11:56 CONFIG [org.geoserver] - Loading catalog /geoserver
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded style 'line'
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded style 'generic'
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded style 'polygon'
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded style 'point'
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded style 'raster'
+31 011 02:11:56 CONFIG [org.geoserver] - Loaded default workspace 'fieldphotos'
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded workspace 'fieldphotos'
+31 011 02:11:57 CONFIG [org.geoserver] - Read catalog in 334.4 ms
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'csw', enabled
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'WMTSInfoImpl-2175a759:187356f930d:-7fff', enabled
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'WCSInfoImpl-2175a759:187356f930d:-7ffe', enabled
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'WFSInfoImpl-2175a759:187356f930d:-7ffd', enabled
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'WMSInfoImpl-2175a759:187356f930d:-7ffc', enabled
+31 011 02:11:57 CONFIG [org.geoserver] - Loaded service 'WPSInfoImpl--482e96d9:187311e5e52:-7ff8', enabled
+31 011 02:11:57 CONFIG [gwc.config] - Will look for 'geowebcache.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 011 02:11:57 CONFIG [gwc.config] - Create configuration file '/opt/geoserver/data_dir/gwc/geowebcache.xml' from template jar:file:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib/gwc-core-1.21.1.jar!/geowebcache_empty.xml
+31 011 02:11:57 WARN   [config.XMLConfiguration] - GWC configuration validation error: cvc-elt.1.a: Cannot find the declaration of element 'gwcConfiguration'.
+31 011 02:11:57 WARN   [config.XMLConfiguration] - Will try to use configuration anyway. Please check the order of declared elements against the schema.
+31 011 02:11:58 CONFIG [config.XMLConfiguration] - Initializing GridSets from /opt/geoserver/data_dir/gwc
+31 011 02:11:58 CONFIG [config.XMLConfiguration] - Initializing layers from /opt/geoserver/data_dir/gwc
+31 011 02:11:58 CONFIG [gwc.layer] - Initializing GWC configuration based on GeoServer's Catalog
+31 011 02:11:58 CONFIG [gwc.layer] - GeoServer TileLayer store base directory is: gwc-layers
+31 011 02:11:58 CONFIG [gwc.layer] - Loading tile layers from gwc-layers
+31 011 02:11:58 CONFIG [gwc.layer] - Loaded 0 tile layers in 4.103 ms
+31 011 02:11:58 CONFIG [storage.BlobStoreAggregator] - BlobStoreConfiguration /opt/geoserver/data_dir/gwc contained no blob store infos.
+31 011 02:11:58 CONFIG [storage.DefaultStorageFinder] - Found system environment variableGEOWEBCACHE_CACHE_DIR set to /opt/geoserver/data_dir/gwc, using it as the default prefix.
+31 011 02:11:58 CONFIG [gwc.config] - Initializing GeoServer specific GWC configuration from gwc-gs.xml
+31 012 02:12:04 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 012 02:12:04 CONFIG [gwc.config] - Will look for 'geowebcache-diskquota-jdbc.xml' in directory '/opt/geoserver/data_dir/gwc'.
+31 012 02:12:04 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 012 02:12:05 CONFIG [diskquota.ConfigLoader] - Quota config is: /opt/geoserver/data_dir/gwc/geowebcache-diskquota.xml
+31 012 02:12:05 CONFIG [diskquota.DiskQuotaMonitor] - Setting up disk quota periodic enforcement task
+31 012 02:12:05 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers configured with their own quotas. 
+31 012 02:12:05 CONFIG [diskquota.DiskQuotaMonitor] - 0 layers attached to global quota 20.0 GB
+31 012 02:12:05 CONFIG [diskquota.DiskQuotaMonitor] - Disk quota periodic enforcement task set up every 5 SECONDS
+31 012 02:12:05 CONFIG [geowebcache.GeoWebCacheDispatcher] - Invoked setServletPrefix(gwc)
+31 012 02:12:05 CONFIG [wms.WMSService] - Will NOT recombine tiles for non-tiling clients.
+31 012 02:12:05 CONFIG [wms.WMSService] - Will proxy requests to backend that are not getmap or getcapabilities.
+31 012 02:12:06 CONFIG [geoserver.importer] - Initial importer configuration
+31 012 02:12:09 WARN   [turbojpeg.TurboJPEGMapResponse] - The turbo jpeg encoder is available for usage
+31 012 02:12:10 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 012 02:12:10 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 012 02:12:10 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 012 02:12:10 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 012 02:12:13 INFO   [geoserver.monitor] - Monitor extension enabled
+31 012 02:12:16 ERROR  [support.TaskUtils$LoggingErrorHandler] - Unexpected error occurred in scheduled task
+java.lang.NullPointerException
+	at org.geoserver.importer.ImporterContextCleaner.run(ImporterContextCleaner.java:39)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 5 bindable processes in GeoServer specific processes
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 89 bindable processes in Deprecated processes
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process vec:GroupCandidateSelection as the input groupingAttributes of type class java.lang.Object cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 31 bindable processes in Vector processes
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 48 bindable processes in Geometry processes
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 1 bindable processes in PolygonLabelProcess
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 1 bindable processes in geo
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process ras:ConvolveCoverage as the input kernel of type class javax.media.jai.KernelJAI cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input zones of type class java.lang.Object cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input nodata of type class it.geosolutions.jaiext.range.Range cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the input rangeData of type class java.lang.Object cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Blacklisting process ras:RasterZonalStatistics2 as the output zonal statistics of type interface java.util.List cannot be handled
+31 012 02:12:23 CONFIG [geoserver.wps] - Found 18 bindable processes in Raster processes
+31 012 02:12:27 CONFIG [geoserver.security] - Start reloading user/groups for service named default
+31 012 02:12:27 CONFIG [geoserver.security] - Reloading user/groups successful for service named default
+31 012 02:12:28 CONFIG [geoserver.security] - AuthenticationCache Initialized with 1000 Max Entries, 300 seconds idle time, 600 seconds time to live and 3 concurrency level
+31 012 02:12:28 CONFIG [geoserver.security] - AuthenticationCache Eviction Task created to run every 600 seconds
+31 012 02:12:28 INFO   [geoserver.importer] - Enabling import store: memory
+31 012 02:12:28 INFO   [config.XMLConfiguration] - Wrote configuration to /opt/geoserver/data_dir/gwc
+31 027 02:27:10 WARN   [geoserver.security] - Failed login, user admin from 172.19.0.1
+31 027 02:27:10 INFO   [geoserver.security] - Brute force attack prevention, delaying login for 3458ms
+31 027 02:27:14 INFO   [geoserver.security] - Strong cryptography is available
+31 027 02:27:15 WARN   [geoserver.security] - Failed login, user admin from 172.19.0.1
+31 027 02:27:15 INFO   [geoserver.security] - Brute force attack prevention, delaying login for 2378ms

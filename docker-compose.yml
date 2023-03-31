@@ -3,14 +3,17 @@ version: "3.9"
 services:
   fieldphotos:
     image: kartoza/geoserver:2.21.1
+    container_name: fieldphotos
     ports:
       - "9992:8080"
     environment:
       GEOSERVER_DATA_DIR: /geoserver
       GEOSERVER_ADMIN_USER: admin
       GEOSERVER_ADMIN_PASSWORD: icem
+      STABLE_EXTENSIONS: charts-plugin, css-plugin, dxf-plugin, excel-plugin, geopkg-output-plugin, h2-plugin, imagemap-plugin, importer-plugin, jp2k-plugin, mapml-plugin, mbstyle-plugin, mysql-plugin, netcdf-plugin, querylayer-plugin, xslt-plugin, ysld-plugin
     volumes:
       - ./tomcat/ROOT:/usr/local/tomcat/webapps/ROOT
-      - ./tomcat/geoserver/WEB-INF:/usr/local/tomcat/webapps/geoserver/WEB-INF
+      - ./tomcat/geoserver/WEB-INF/lib:/usr/local/tomcat/webapps/geoserver/WEB-INF/lib
       - ./tomcat/geoserver/data:/geoserver
+    #  - ./tomcat/fonts:/opt/fonts
     restart: always
