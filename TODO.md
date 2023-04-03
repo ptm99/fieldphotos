@@ -1,3 +1,8 @@
+App implementation in different way: Using static geojson file and html/js file:
+- Geojson file for point data and write using json library -> simple json file
+- HTML file to load .geojson file -> load json file for leaflet map
+
+
 This is an app for managing all field photos and shown on map the location of photos taken
 Frontend: a HTML file run on Tomcat server, Tomcar server is also used for Geoserver
 Backend:

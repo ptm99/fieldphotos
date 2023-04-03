@@ -81,3 +81,26 @@ DEBUG 2023-03-31 02:11:45,711 [main][Log4J2Logger.java:220] : Extension lookup '
 DEBUG 2023-03-31 02:11:45,718 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
 DEBUG 2023-03-31 02:11:45,719 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
 DEBUG 2023-03-31 02:11:45,791 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
+CONFIG 2023-03-31 08:06:31,913 [main][Log4J2Logger.java:215] : Logging policy: Log4J2
+CONFIG 2023-03-31 08:06:32,810 [main][Log4J2Logger.java:189] : Factory implementations for category GridCoverageFactory:
+  org.geotools.coverage.grid.GridCoverageFactory
+DEBUG 2023-03-31 08:06:34,514 [main][Log4J2Logger.java:220] : Coordinate Handlers scan
+DEBUG 2023-03-31 08:06:34,538 [main][Log4J2Logger.java:220] : ClimatologicalTimeHandlerSpi being initialized
+CONFIG 2023-03-31 08:06:34,541 [main][Log4J2Logger.java:189] : Factory implementations for category CoordinateHandlerSpi:
+  org.geotools.imageio.netcdf.cv.ClimatologicalTimeHandlerSpi
+INFO  2023-03-31 08:06:35,023 [main][Nc4Iosp.java:176] : Nc4Iosp: NetCDF-4 C library loaded (jna_path='/usr/local/lib/', libname='netcdf').
+DEBUG 2023-03-31 08:06:35,040 [main][Nc4Iosp.java:177] : Netcdf nc_inq_libvers='4.6.2 of Nov 20 2018 06:04:35 $' isProtected=false
+DEBUG 2023-03-31 08:06:35,041 [main][Log4J2Logger.java:220] : NetCDFImageReaderSpi Constructor
+DEBUG 2023-03-31 08:06:35,920 [main][Log4J2Logger.java:220] : NetCDFImageReaderSpi Constructor
+CONFIG 2023-03-31 08:06:36,201 [main][Log4J2Logger.java:189] : Factory implementations for category FilterFactory:
+  org.geotools.filter.FilterFactoryImpl
+CONFIG 2023-03-31 08:06:36,340 [main][Log4J2Logger.java:189] : Factory implementations for category StyleFactory:
+  org.geotools.styling.StyleFactoryImpl
+CONFIG 2023-03-31 08:06:36,362 [main][Log4J2Logger.java:189] : Factory implementations for category FeatureFactory:
+  org.geotools.feature.LenientFeatureFactoryImpl
+  org.geotools.feature.ValidatingFeatureFactoryImpl
+DEBUG 2023-03-31 08:06:37,614 [main][Log4J2Logger.java:220] : Extension lookup 'XStreamPersisterInitializer', prior to bean geoserverExtensions initialisation.
+DEBUG 2023-03-31 08:06:37,616 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', prior to bean geoserverExtensions initialisation.
+DEBUG 2023-03-31 08:06:37,620 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionProvider', but provided ApplicationContext is unset.
+DEBUG 2023-03-31 08:06:37,621 [main][Log4J2Logger.java:220] : Extension lookup 'ExtensionFilter', but provided ApplicationContext is unset.
+DEBUG 2023-03-31 08:06:37,692 [main][Log4J2Logger.java:220] : CONFIGURING GEOSERVER LOGGING -------------------------
