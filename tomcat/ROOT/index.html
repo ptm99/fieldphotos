@@ -1,90 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LISA Mapviewer</title>
+        <title>Field Photos Map Viewer</title>
         <!-- JQuery min inherited from WP -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     </head>
-    <body>
-        <!-- All develop code is placed on body, include HTML, CSS, JS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
-<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-<!-- <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script> -->
-<link rel="stylesheet" href="lisa_static/lisa.css"/>
-<h2>LISA Mapviewer</h2>
-<div class="lisa-container" id="lisa-main">
-    <div class="lisa-leftmenu" id="lisa-leftmenu">
-        <div class="accordion" id="accordion2">
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
-                                <i class="icon-plus"></i> Base layers </a>
-                </div>
-                <!-- div class="accordion-inner">
-                    <label class="control-label"> Background layer</label><br>
-                    <div id="bgGroup"></div>
-                </div-->
-                <div class="accordion-inner">
-                    <label class="control-label"> Admin boundaries</label><br>
-                    <div id="adminGroup"></div>
-                </div>
-            </div> 
-            <div class="accordion-group">
-              <div class="accordion-heading">
-                  <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
-                              <i class="icon-plus"></i> Climate Change </a>
-              </div>
-                <div class="accordion-inner">
-                    <input type="checkbox" name="ccLayer" onchange="onoffGroup(this);">
-                    <label class="control-label"> Climate Change layers</label><br>
-                    <div id="ccGroup"></div>
-                </div>
-              </div>
-            <div class="accordion-group">
-                <div class="accordion-heading">
-                    <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
-                                <i class="icon-plus"></i>Impact and Vulnerability Assessment</a>
-                </div>
-                <div id="collapse1" class="accordion-body collapse in">
-                  <div class="accordion-inner">
-                    <label class="control-label">Hazard and Asset:</label><br>
-                    <table border="1" width="100%">
-                        <tr>
-                            <td>
-                    <label class="control-label">Select hazard type</label><br>
-                      <select name="sel_hazard" class="myselect" size="4">
-                        <option value="hz_flood">Flood</option>
-                        <option value="hz_drought">Drought</option>
-                        <option value="hz_forestfire">Forest fire</option>
-                        <option value="hz_other">Other</option>
-                      </select>
-                            </td>
-                            <td>
-                    <label class="control-label">Select Asset</label><br>
-                      <select name="sel_asset" class="myselect" size="4">
-                        <option value="ass_vil" disabled>Villages</option>
-                        <option value="ass_road" disabled>Road</option>
-                        <option value="ass_drainage" disabled>Drainage</option>
-                        <option value="ass_other" disabled>Other</option>
-                      </select>
-                            </td>
-                        </tr>
-                      </table>
-                    <div id="va_selected"></div>
-                </div>
-                <div id="collapse1" class="accordion-body collapse in">
-                    <div class="accordion-inner">
-                        <input type="checkbox" id="vaGroupOnOff"  name="vaLayer" onchange="onoffGroup(this);">
-                        <label class="control-label" id="vaGroupTitle">Impact and Vulnerability Assessment layers</label><br>
-                        <div id="vaAllGroup"></div>
-                    </div>
-                </div>
-              </div>
-            </div>
-      </div></div>
-    <div  id="map"></div>
-</div>
-<p id="geourl"></p>
-<script type="text/javascript" src="lisa_static/lisamapviewer.js"></script>
-    </body>
+<body>
+  <!-- All develop code is placed on body, include HTML, CSS, JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+  <!-- <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script> -->
+  <link rel="stylesheet" href="fieldphotos/fp.css"/>
+  <h2>Field photos map viewer</h2>
+      <div  id="map"></div>
+    <script type="text/javascript" src="fieldphotos/fp.js"></script>
+</body>
 </html>

@@ -21,7 +21,7 @@ def exifout(fname):
   p['properties']['lat']= t[0]+t[1]/60.0+t[2]/3600.0 if tags['GPS GPSLatitudeRef'].values=='N' else -(t[0]+t[1]/60.0+t[2]/3600.0)
   t=tags['GPS GPSLongitude'].values
   p['properties']['lon']= t[0]+t[1]/60.0+t[2]/3600.0 if tags['GPS GPSLongitudeRef'].values=='E' else 360-(t[0]+t[1]/60.0+t[2]/3600.0)
-  p['geometry']['coordinates']=[p['properties']['lat'],p['properties']['lon'],float(tags['GPS GPSAltitude'].values[0])] if 'GPS GPSAltitude' in tags.keys() else -999
+  p['geometry']['coordinates']=[p['properties']['lat'],p['properties']['lon'],float(tags['GPS GPSAltitude'].values[0]) if 'GPS GPSAltitude' in tags.keys() else -999]
   t=datetime.strptime(tags['EXIF DateTimeOriginal'].values, '%Y:%m:%d %H:%M:%S')
   p['properties']['year']=t.year
   p['properties']['month']=t.month
