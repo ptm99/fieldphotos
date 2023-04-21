@@ -2,8 +2,10 @@ version: "3.9"
 
 services:
   fp:
-    image: kartoza/geoserver:2.21.1
+    build:
+      dockerfile: ./Dockerfile
     container_name: fieldphotos
+    image: ptm/geoserver:my_test
     ports:
       - "9992:8080"
     environment:
