@@ -1,0 +1,6 @@
+FROM rocker/shiny:4.1.3
+
+ENV CRAN https://cran.r-project.org/
+
+#ADD start.sh /home/shiny/
+#RUN chmod u+x /home/shiny/start.sh && sync && /home/shiny/start.sh
