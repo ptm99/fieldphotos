@@ -12,3 +12,4 @@ Progress:
 - Geoserver: run on Geoserver 2.21.1 -> Docker run and map volume for Tomcat root folder (include index.html) and Geoserver data
 - PostGIS:
 - Shiny R:
+- PgAdmin:
