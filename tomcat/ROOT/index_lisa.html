@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LISA Mapviewer</title>
+        <!-- JQuery min inherited from WP -->
+        <!-- script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script -->
+    </head>
+    <body>
+        <!-- All develop code is placed on body, include HTML, CSS, JS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+<!-- <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script> -->
+<link rel="stylesheet" href="lisa_static/lisa.css"/>
+<h2>LISA Mapviewer</h2>
+<div class="lisa-container" id="lisa-main">
+<!-- <script>
+  const csvFHazard = <?php echo get_stylesheet_directory_uri().'/csv/hazard.csv'; ?>
+  const csvFVA = <?php echo get_stylesheet_directory_uri().'/csv/va.csv'; ?>
+  const csvFPhotos = <?php echo get_stylesheet_directory_uri().'/csv/photos.csv'; ?>
+</script> -->
+    <div class="lisa-leftmenu" id="lisa-leftmenu">
+        <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+                                <i class="icon-plus"></i> Base layers </a>
+                </div>
+                <!-- div class="accordion-inner">
+                    <label class="control-label"> Background layer</label><br>
+                    <div id="bgGroup"></div>
+                </div-->
+                <div class="accordion-inner">
+                    <label class="control-label"> Admin boundaries</label><br>
+                    <div id="adminGroup">
+                      <label><input type="checkbox" disabled checked><img src="https://dss.icem.com.au/geolisa/base/wms?REQUEST=GetLegendGraphic&amp;VERSION=1.1.0&amp;FORMAT=image/png&amp;layer=khm_admbnda_adm0_gov_wgs84&amp;style=&amp;WIDTH=20&amp;HEIGHT=20&amp;legend_options=fontName:sans-serif;fontAntiAliasing:true;fontColor:#2c3e50;fontSize:11;dpi:91&amp;SCALE=1001">National boundary<br></label>
+                      <label><input type="checkbox" disabled checked><img src="https://dss.icem.com.au/geolisa/base/wms?REQUEST=GetLegendGraphic&amp;VERSION=1.1.0&amp;FORMAT=image/png&amp;layer=khm_admbnda_adm1_gov_wgs84&amp;style=&amp;WIDTH=20&amp;HEIGHT=20&amp;legend_options=fontName:sans-serif;fontAntiAliasing:true;fontColor:#2c3e50;fontSize:11;dpi:91&amp;SCALE=1001">Provincial boundaries<br></label>
+                      <label><input type="checkbox" disabled checked><img src="https://dss.icem.com.au/geolisa/base/wms?REQUEST=GetLegendGraphic&amp;VERSION=1.1.0&amp;FORMAT=image/png&amp;layer=khm_admbnda_adm2_gov_wgs84&amp;style=&amp;WIDTH=20&amp;HEIGHT=20&amp;legend_options=fontName:sans-serif;fontAntiAliasing:true;fontColor:#2c3e50;fontSize:11;dpi:91&amp;SCALE=1001">District boundaries<br></label>
+                      <label><input type="checkbox" checked onchange="commune_onoff(this);"><img src="https://dss.icem.com.au/geolisa/base/wms?REQUEST=GetLegendGraphic&amp;VERSION=1.1.0&amp;FORMAT=image/png&amp;layer=khm_admbnda_adm3_gov_wgs84&amp;style=&amp;WIDTH=20&amp;HEIGHT=20&amp;legend_options=fontName:sans-serif;fontAntiAliasing:true;fontColor:#2c3e50;fontSize:11;dpi:91&amp;SCALE=1001">Commune boundaries<br></label>
+                    </div>
+                </div>
+                <div class="accordion-inner">
+                  <label class="control-label"> Socio-economic Information</label><br>
+                  <div id="socioEcoGroup">
+                    <label><input type="checkbox" checked onchange="fp_onoff(this);"><img src="https://dss.icem.com.au/geolisa/base/wms?REQUEST=GetLegendGraphic&amp;VERSION=1.1.0&amp;FORMAT=image/png&amp;layer=khm_admbnda_adm3_gov_wgs84&amp;style=&amp;WIDTH=20&amp;HEIGHT=20&amp;legend_options=fontName:sans-serif;fontAntiAliasing:true;fontColor:#2c3e50;fontSize:11;dpi:91&amp;SCALE=1001">Commune boundaries<br></label>
+                  </div>
+              </div>
+              <div class="accordion-inner">
+                <label class="control-label"> Field-photos</label><br>
+                <div id="fieldphotoGroup">
+                  <label><input type="checkbox" checked onchange="commune_onoff(this);"> River erosion hotspots<br></label>
+                </div>
+            </div>
+            </div> 
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                  <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+                    <i class="icon-plus"></i> Hazard and Climate Change </a>
+              </div>
+                <div class="accordion-inner">
+                  <label class="control-label"><input type="checkbox" name="hzLayer1" onchange="onoffGroup(this);"> Hazard</label><br>
+                    <select id="hzGroup1" onchange="hz_select(this);" disabled>
+                      <optgroup label="Flood">
+                        <option value="BTB_Flood2013">Historical flood 2013</option>
+                        <option value="RP5 Flood Hazard Levels">Modelled flood (PIN) - 5year return period </option>
+                        <option value="RP10 Flood Hazard Levels">Modelled flood (PIN) - 10year return period </option>
+                        <option value="RP50 Flood Hazard Levels">Modelled flood (PIN) - 50year return period </option>
+                        <option value="RP100 Flood Hazard Levels">Modelled flood (PIN) - 100year return period </option>
+                        <option value="RP500 Flood Hazard Levels">Modelled flood (PIN) - 500year return period </option>
+                        <option value="RP1000 Flood Hazard Levels">Modelled flood (PIN) - 1000year return period </option>
+                        <option value="BTB_Flood_prone_stakeholder">Participatory flood hotspots 2023</option>
+                      </optgroup>
+                      <optgroup label="Riverbank erosion">
+                        <option value="BTB_Riverbank_erosion">Participatory erosion hotspots 2023</option>
+                      </optgroup>
+                      <optgroup label="Drought">
+                        <option value="BTB_Drought_NDDI">Historical drought (NDDI)</option>
+                      </optgroup>
+                    </select>
+                    <div id="hz_legend1" style="transition: all 0.3s ease;"></div>
+                </div>
+                <div class="accordion-inner">
+                  <label class="control-label"><input type="checkbox" name="ccLayer" onchange="onoffGroup(this);"> Climate Change in 2060</label><br>
+                    <select id="ccGroup" onchange="cc_select(this);" disabled>
+                      <optgroup label="Projection - RCP 8.5">
+                        <option value="060_2060_cvTMax_IPSL-CM5A-MR_RCP85_ann">Average Maximum Temperature (&deg;C)</option>
+                        <option value="084_2060_cvPrecip_IPSL-CM5A-MR_RCP85_ann">Annual Average Precipitation (mm)</option>
+                        <option value="060_2060_cvTMax_IPSL-CM5A-MR_RCP85_114">Dry Season Average Maximum Temperature (&deg;C)</option>
+                        <option value="060_2060_cvTMax_IPSL-CM5A-MR_RCP85_510">Wet Season Average Maximum Temperature (&deg;C)</option>
+                        <option value="084_2060_cvPrecip_IPSL-CM5A-MR_RCP85_114">Dry Season Average Precipitation</option>
+                        <option value="084_2060_cvPrecip_IPSL-CM5A-MR_RCP85_510">Wet Season Average Precipitation</option>
+                      </optgroup>
+                      <optgroup label="Projection - RCP 4.5">
+                        <option value="058_2060_cvTMax_IPSL-CM5A-MR_RCP45_ann">Average Maximum Temperature (&deg;C)</option>
+                        <option value="070_2060_cvPrecip_IPSL-CM5A-MR_RCP45_ann">Annual Average Precipitation (mm)</option>
+                        <option value="058_2060_cvTMax_IPSL-CM5A-MR_RCP45_114">Dry Season Average Maximum Temperature (&deg;C)</option>
+                        <option value="058_2060_cvTMax_IPSL-CM5A-MR_RCP45_510">Wet Season Average Maximum Temperature (&deg;C)</option>
+                        <option value="070_2060_cvPrecip_IPSL-CM5A-MR_RCP45_114">Dry Season Average Precipitation</option>
+                        <option value="058_2060_cvPrecip_IPSL-CM5A-MR_RCP45_510">Wet Season Average Precipitation</option>
+                      </optgroup>
+                      <optgroup label="Baseline (1985-2005)">
+                        <option value="19611990_cvTMax_KHM_ann">Average Maximum Temperature - Annual - Baseline (&deg;C)</option>
+                        <option value="19611990_cvPrecip_KHM_ann">Average Precipitation - Annual - Baseline (mm)</option>
+                        <option value="19611990_cvTMax_KHM_114"> 	Average Maximum Temperature - Dry Season - Baseline (&deg;C)</option>
+                        <option value="19611990_cvTMax_KHM_510">Average Maximum Temperature - Wet Season - Baseline (&deg;C)</option>
+                        <option value="19611990_cvPrecip_KHM_114">Average Precipitation - Dry Season - Baseline (mm)</option>
+                        <option value="19611990_cvPrecip_KHM_510">Average Precipitation - Wet Season - Baseline (mm)</option>
+                      </optgroup>
+                    </select>
+                    <div id="cc_legend" style="transition: all 0.3s ease;"></div>
+                </div>
+              </div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a id = "small_collapse" class="accordion-toggle active" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+                                <i class="icon-plus"></i>Impact and Vulnerability Assessment</a>
+                </div>
+                <div id="collapse1" class="accordion-body collapse in">
+                  <div class="accordion-inner">
+                    <table border="1" width="100%">
+                        <tr>
+                          <td valign="top" width="50%">
+                      <label class="control-label">Select Asset</label><br>
+                        <select name="sel_asset" class="myselect" size="4">
+                          <option value="ass_village">Villages</option>
+                          <option value="ass_buildup">Built-up Area</option>
+                          <option value="ass_road">Roads</option>
+                          <option value="ass_railway">Railways</option>
+                          <option value="ass_school">Schools</option>
+                          <option value="ass_health">Health facilities</option>
+                        </select>
+                        <div id="AssetLegend"></div>
+                          </td>
+                          <td valign="top" width="50%">
+                    <label class="control-label">Select hazard type</label><br>
+                      <select name="sel_hazard" class="myselect" size="4">
+                        <option value="hz_flood" disabled>Flood</option>
+                        <option value="hz_rivererosion" disabled>Riverbank Erosion</option>
+                        <option value="hz_drought" disabled>Drought</option>
+                      </select>
+                      <input type="checkbox" id="hzLayerOnOff"  name="hazardLayer" onchange="onoffGroup(this);">
+                      <label class="control-label" id="hzLayerTitle">Hazard layer</label><br>
+                      <div id="hzLayer"></div>
+                            </td>
+                        </tr>
+                      </table>
+                </div>
+                <div id="collapse1" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        <input type="checkbox" id="vaGroupOnOff"  name="vaLayer" onchange="onoffGroup(this);">
+                        <label class="control-label" id="vaGroupTitle">Impact and Vulnerability Assessment layers</label><br>
+                        <div id="vaAllGroup"></div>
+                    </div>
+                </div>
+              </div>
+            </div>
+      </div></div>
+    <div  id="map"></div>
+</div>
+
+<p id="geourl"></p>
+<script>
+  const csvFBaselyr = 'lisa_static/baselayers.csv';
+  const csvFHazard = 'lisa_static/hazard.csv';
+  const csvFVA ='lisa_static/va.csv';
+  const csvFPhotos = 'lisa_static/photos.csv';
+</script>
+<script type="text/javascript" src="lisa_static/leaflet.wms.js"></script>
+<script type="text/javascript" src="lisa_static/lisamapviewer.js"></script>
+    </body>
+</html>

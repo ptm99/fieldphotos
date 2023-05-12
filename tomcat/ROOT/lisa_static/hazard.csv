@@ -1,0 +1,4 @@
+﻿hazard,lname,ws,style,layers
+hz_flood,Flood extent from PIN,hazard,,RP50 Flood Hazard Levels
+hz_drought,Historical drought conditions (NDDI),hazard,,BTB_Drought_NDDI
+hz_rivererosion,River bank erosion,hazard,,BTB_Riverbank_erosion

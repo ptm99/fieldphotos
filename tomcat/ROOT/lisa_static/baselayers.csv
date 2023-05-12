@@ -1,0 +1,15 @@
+﻿group,type,lname,ws,style,layers
+hazard,hz_flood,Flood extent from PIN,hazard,,RP50 Flood Hazard Levels
+hazard,hz_drought,Historical drought conditions (NDDI),hazard,,BTB_Drought_NDDI
+hazard,hz_rivererosion,River bank erosion,hazard,,BTB_Riverbank_erosion
+hazard_all,Flood,Historical flood 2013,hazard,,BTB_Flood2013
+hazard_all,Riverbank erosion,Participatory erosion hotspots 2023,hazard,,BTB_Riverbank_erosion
+hazard_all,Drought,Historical drought (NDDI),hazard,,BTB_Drought_NDDI
+socio,socio,Population per district (2019),socio,,BTB_Population_2019_per_district
+socio,socio,Population per village (2019),socio,,BTB_Population_2019_per_village
+cc,Projection - RCP 8.5,Average Maximum Temperature (&deg;C),clim_data,,060_2060_cvTMax_IPSL-CM5A-MR_RCP85_ann
+cc,Projection - RCP 8.5,Annual Average Precipitation (mm),clim_data,,084_2060_cvPrecip_IPSL-CM5A-MR_RCP85_ann
+cc,Projection - RCP 4.5,Average Maximum Temperature (&deg;C),clim_data,,058_2060_cvTMax_IPSL-CM5A-MR_RCP45_ann
+cc,Projection - RCP 4.5,Annual Average Precipitation (mm),clim_data,,070_2060_cvPrecip_IPSL-CM5A-MR_RCP45_ann
+cc,Baseline (1985-2005),Average Maximum Temperature (&deg;C) - Baseline,clim_data,,19611990_cvTMax_KHM_ann
+cc,Baseline (1985-2005),Annual Average Precipitation (mm) - Baseline,clim_data,,19611990_cvPrecip_KHM_ann

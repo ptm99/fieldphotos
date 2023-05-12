@@ -1,0 +1,11 @@
+﻿asset,hazard,lname,ws,style,layers,zIndex,dlmap
+ass_village,hz_flood,Village Exposed to Flood,va,Vill_Exp_Flood_PIN,BTB_vill_VA,499,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_village_name2.jpg
+ass_village,hz_flood,Village Sensitivity,va,Vill_Sen_Flood,BTB_vill_VA,499,07.Sensitivity_Adaptive capacity_Vulnerability/1.Battambang_Municipality_sensitivity.jpg
+ass_village,hz_flood,Village Impacted by Flood,va,Vill_Imp_Flood_PIN,BTB_vill_VA,499,07.Sensitivity_Adaptive capacity_Vulnerability/1.Battambang_Municipality_VA.jpg
+ass_village,hz_flood,Village Adaptive Capacity,va,Vill_Cap_Flood,BTB_vill_VA,499,07.Sensitivity_Adaptive capacity_Vulnerability/1.Battambang_Municipality_capacity.jpg
+ass_village,hz_flood,Village Flood Vulnerability,va,Vill_VA_Flood,BTB_vill_VA,499,07.Sensitivity_Adaptive capacity_Vulnerability/1.Battambang_Municipality_VA.jpg
+ass_buildup,hz_flood,Built-up Exposed to Flood,exposure,,Union_Flood_commune_BTB_LU2009,501,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_buildup.jpg
+ass_road,hz_flood,Road Exposed to Flood,exposure,,Union_Flood_commune_BTB_mainroad&Union_Flood_commune_BTB_otherroad,501,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_road.jpg
+ass_railway,hz_flood,Railway Exposed to Flood,exposure,,Union_Flood_commune_BTB_rail,501,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_rail.jpg
+ass_school,hz_flood,School Exposed to Flood,exposure,,Union_Flood_commune_BTB_school,501,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_schoolhealth.jpg
+ass_health,hz_flood,Health facilities Exposed to Flood,exposure,,Union_Flood_commune_BTB_health,501,06.Exposure to rainfall-induced floods/6.Battambang_Municipality_PIN_schoolhealth.jpg
