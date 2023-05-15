@@ -11,12 +11,15 @@
   overflow-y: auto;
 }
 
+<<<<<<< HEAD
 .map-icon {
   background-image: url(/lisa_static/img/map.svg);
   background-repeat: no-repeat;
   width: 20px;
   height: 10px;
 }
+=======
+>>>>>>> e5d532308785317c9e9a2d603cf04fd965bc4c88
 #map {
   width: calc(100% - 400px);
   height: 800px;
